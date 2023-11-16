@@ -1,0 +1,116 @@
+  .banner{
+    height: 300px;
+    position: relative;
+  }
+
+  .banner .baneer_img{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /* border: 2px solid wheat; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom: 2px solid cornflowerblue
+  }
+  .banner .bottom{
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+    width: 100%;
+    height: 5rem;
+    background-image: linear-gradient(transparent,black);
+
+  }
+  .banner .content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    padding: 20px 30px ;
+    display: flex;
+    flex-direction: column;
+    z-index: 3 ;
+  }
+  .banner .content .top{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+  }
+  .banner .content .top p{
+    color: rgb(99, 97, 93);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .banner .content .top p span{
+    color: antiquewhite
+  }
+  .banner .content .top i{
+    color: white;
+  }
+  .banner .content .artist{
+    margin-top: auto;
+    color: wheat;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .banner .content .artist  .left .name h1{
+    display: flex;
+    font-size: 35px;
+  }
+  .banner .content .artist  .right {
+     margin-top: 9%;
+  }
+  .banner .content .artist  .right p i{
+    margin-right: 6px;
+  }
+  .banner .content .artist  .right p span{
+    color: #888;
+    margin-left: 5px;
+  }
+  .banner .content .artist  .left .name p {
+    color: cadetblue;
+}
+  .banner .content .artist  .left .name .buttons {
+    margin-left: 0;
+    margin-top: 8px;
+}
+
+
+.banner .content .artist  .left .name .buttons button {
+    width: 130px;
+    height: 30px;
+    border: 2px solid hsl(183, 83%, 57%);
+    outline: none;
+    border-radius: 20px;
+    background: #1a2d38b8;
+    color: #fff;
+    cursor: pointer;
+
+}
+.banner .content .artist  .left .name  .buttons button:hover {
+  background: none;
+  color: #36e2ec;
+}
+
+.banner .content .artist  .left .name  .buttons button:nth-child(2) {
+  background: none;
+  color: #36e2ec;
+  margin-left: 2%;
+
+}
+
+.banner .content .artist  .left .name .buttons button:nth-child(2):hover {
+  background: #1a2d38b8;
+  color: #fff;
+} 
+  
+.buttons i{
+  margin-right:7% ;
+}
+
+

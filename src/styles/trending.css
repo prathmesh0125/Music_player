@@ -1,0 +1,138 @@
+.trend {
+  color: black;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.namecontainer{
+   margin-top: 9px;
+   display: flex;
+   justify-content: space-between;
+}
+.namecontainer :hover{
+   color: aliceblue;
+   font-weight: bold;
+}
+
+.Playlistcontainer .namecontainer{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   color: black;
+   margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+}
+.Playlistcontainer .namecontainer:hover{
+   color: rgb(219, 8, 43);
+   transition: 0.6s;
+}
+.Playlistcontainer{
+   cursor: pointer ;
+   margin: 15px 0px;
+}
+.Playlistcontainer .playlistscroll{
+   height: 192px;
+   /* background-color: aqua; */
+   overflow-x: hidden;
+   overflow-y: scroll;
+   position: relative;
+
+}
+
+
+.menu_side  {
+   width: 100%;
+   height: 55px;
+   margin-top: -2px;
+   overflow: auto
+}
+
+.menu_side ::-webkit-scrollbar {
+  display: none;
+}
+
+.menu_side  li {
+  list-style: none;
+  position: relative;
+  padding: 5px 0px 5px 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 2s linear;
+  justify-content: space-between;
+}
+
+
+.menu_side li::before{
+   position: absolute;
+   content: "";
+   bottom: 3px;
+   left: 50px;
+   width: 0px;
+   height: 2px;
+   border-radius: 5px;
+   background: #e9109c;
+}
+.menu_side li:hover::before,
+.menu_side li.active::before {
+   /* background: rgba(113, 68, 68, 0.3); */
+   /* transition: 0.3s; */
+  width: 100%;
+  transition: width 1.0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+}
+/* .menu_side  li:hover {
+   background: rgba(113, 68, 68, 0.3);
+   transition: 0.3s;
+} */
+
+.menu_side  li span {
+   font-size: 13px;
+   font-weight: 600;
+   color: black;
+}
+
+.menu_side  li img {
+   width: 32px;
+   height: 32px;
+   margin-left: 25px;
+}
+
+.menu_side  li h5 {
+
+    font-size: 11px;
+    margin-left: 15px;
+    width: 170px;
+    /* border: 1px solid rgb(208, 193, 193); */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+ .menu_side  li h5 .subtitle {
+    font-size: 9px;
+    color: #030508;
+}
+
+ /* .menu_side li i{
+    position: absolute;
+    right: 16px;
+    font-size: 20px;
+
+}  */
+.menu_side .favourite i {
+   color: red;
+   filter: drop-shadow(0px 0px 4px red);
+ }
+
+
+@media screen and (max-width:390px) {
+   .namecontainer,.menu_side {
+     display: none;
+   }  
+   
+ }

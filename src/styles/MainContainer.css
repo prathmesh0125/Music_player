@@ -1,0 +1,103 @@
+.maincontainer {
+  height: 100vh;
+  z-index: 1;
+  flex-grow:1;
+  /* backdrop-filter: blur(10px); */
+  transition:  all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.menulist{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 4px;
+  background-color: #2c2c2c;
+}
+.menulist ul{
+  display: flex;
+  align-items: center;
+}
+.menulist ul li{
+  list-style: none;
+  margin: 0 25px;
+position: relative;
+}
+.menulist ul li a{
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+}
+.menulist ul li::before{
+  position: absolute;
+  content: "";
+  bottom: -3px;
+  left: 1px;
+  width: 0px;
+  height: 2px;
+  border-radius: 5px;
+  background: white;
+}
+.menulist ul li:hover::before,
+.menulist ul li.active::before{
+   width:47px;
+   transition: width 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.menulist ul li a:hover,.menulist ul li.active a{
+  color: #f1f1f1;
+   transition: 0.3s;
+}
+.menulist p{
+  color: #f1f1f1;
+  font-size: 14px;
+}
+.menulist p span{
+/* margin-right: 10px; */
+display: block;
+font-size: 10px;
+text-align: center;
+color: #848484;
+
+}
+.menulist p i{
+  margin-right: 6px;
+  font-size: 12px;
+
+}
+
+@media screen and (max-width:410px){
+  .maincontainer{
+    margin-left: 47px !important;
+    min-width: 380px !important;
+  }
+  .content{
+    padding: 10px 15px;
+  }
+  .banner .content .artist .left .name p{
+   font-size:12px;
+  }
+  .banner .content .artist .left .name .buttons button{
+    margin-top: 5%;
+  }
+  .banner .content .artist .right {
+    display: none;
+  }
+  .menulist{
+      padding: 5px 10px;
+  }
+  .menulist ul li{
+    margin: 0 5px;
+  }
+  .menulist p{
+    font-size: 12px;
+  }
+  .menulist p i{
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width:800px){
+  .maincontainer{
+    margin-left: 30px;
+    min-width: 380px;
+  }
+}

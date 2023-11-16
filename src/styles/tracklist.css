@@ -1,0 +1,183 @@
+.tracklist {
+  width: 113%;
+  border: 3px solid black;
+  /* position: fixed; */
+  border-top: 3px solid rgb(229, 15, 15);
+  box-shadow: 1px -9px 14px 2px #05133a;
+  margin-top: 3px;
+  background: repeating-linear-gradient(-179deg, #af1111, transparent 134px);
+  margin-left: -15px;
+}
+/* .tracklist::before{
+  position: absolute;
+    content: "";
+    font-size: bold;
+    top: 0;
+    left: -15px;
+    width: 0px;
+    height: 100%;
+    background: red;
+    border-radius: 5px;
+} */
+
+.tracklist .wave {
+  width: 30px;
+  height: 31px;
+  /* border: 1px solid white; */
+  padding-bottom: 9px;
+  display: flex;
+  align-items: flex-end;
+  margin-right: -16px;
+  margin-top: 11px;
+  margin-left: 12px;
+}
+.tracklist .wave .wave1 {
+  width: 3.2px;
+  height: 10px;
+  background: #090505;
+  margin-right: 3px;
+  border-radius: 10px 10px 0px 0px;
+  animation: wave 0.5s linear infinite;
+}
+
+.tracklist .wave .wave1:nth-child(2) {
+  height: 13px;
+  margin-right: 3.5px;
+  animation-delay: 0.4s;
+}
+
+.tracklist .wave .wave1:nth-child(3) {
+  height: 8px;
+  animation-delay: 0.8s;
+}
+
+.tracklist .active1 .wave1 {
+  animation: wave 0.5s linear infinite;
+}
+
+.tracklist .active1 .wave1:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.tracklist .active1 .wave1:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+@keyframes wave {
+  0% {
+    height: 10px;
+  }
+
+  50% {
+    height: 15px;
+  }
+
+  100% {
+    height: 10px;
+  }
+}
+.tracklist .top img {
+  display: flex;
+  width: 34px;
+  height: 34px;
+  /* border: 1px solid black; */
+  margin-left: 15%;
+  margin-top: -12%;
+}
+
+.tracklist .top h5 {
+  width: 130px;
+  margin-left: 35%;
+  color: black;
+  line-height: 17px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 15px;
+  margin-top: -12%;
+}
+
+.tracklist .top h5 .subtitle {
+  font-size: 10px;
+  color: black;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: nowrap;
+}
+
+.tracklist .bottom {
+  margin-left: 10px;
+  margin-right: 8px;
+  margin-top: 4%;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.tracklist .bottom i {
+  font-size: 18px;
+}
+.tracklist .bottom i:hover {
+  color: white;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.tracklist .bottom input {
+  position: relative;
+  height: 5px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background: rgba(168, 165, 94, 0.46);
+  appearance: none;
+}
+/* for chrome & safari*/
+.tracklist .bottom input::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  background: repeating-radial-gradient(#0c0b0b, transparent 55%);
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: 2;
+  transition: width 250ms linear;
+}
+.tracklist .bottom input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: rgb(221, 216, 207);
+  border: 2px solid black;
+  cursor: pointer;
+  position: relative;
+  margin: -1px 0 0 0;
+  z-index: 3;
+  box-sizing: border-box;
+  transition: all 250ms linear;
+}
+/* safari has its own css for input range element  so for fixing it*/
+.tracklist .bottom input::-moz-progress-bar {
+  background: repeating-radial-gradient(#0c0b0b, transparent 55%);
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: 2;
+  transition: width 250ms linear;
+}
+.tracklist .bottom input::-moz-range-progress {
+  background: repeating-radial-gradient(#0c0b0b, transparent 55%);
+  width: 50%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: 2;
+  transition: width 250ms linear;
+}
+@media screen and (max-width:550px) {
+  .tracklist{
+    display: none;
+  }
+  .wave{
+    display: flex;
+  }
+}

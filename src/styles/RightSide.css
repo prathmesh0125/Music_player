@@ -1,0 +1,54 @@
+.rightSide {
+  height: 100vh;
+  width: 80px;
+  min-width: 80px;
+  background: rgb(90 125 148 / 60%);
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  border-left: 1px solid rgb(194, 13, 210);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.35, 1.275);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.rightSide .gopro,
+.rightSide .profile {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rightSide .gopro i,
+.rightSide .profile i {
+  color: white;
+  margin: 20px 0;
+  text-align: center;
+  flex-direction: column;
+  font-size: 20px;
+  position: relative;
+}
+
+.rightSide .gopro i p {
+  font-size: 14px;
+}
+
+.rightSide .gopro i p span {
+  color: #848484;
+}
+
+.rightSide .gopro i:nth-child(2)::before {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: rgb(225, 9, 9);
+  border-radius: 50%;
+}
+@media screen and (max-width: 400px) {
+  .rightSide {
+    width: 64px;
+    min-height: 64px;
+  }
+}

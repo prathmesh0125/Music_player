@@ -1,0 +1,17 @@
+1.'npm install react-icons
+ --save' for react icons
+2.{title,menuobject} Array distrucring
+ex {title},{menuobject}
+    or
+3.use (props)
+ex:{props.title},{props.menuobject}
+4.new learing :text-transform: uppercase;
+5.we already do scroolbar hidden in index.css
+6.text-overflow:elipses is used for  bigger name convert into short name like prathmesh to prat...
+7.simple way to use image in react is put img in public folder & use like src="logo192.png"
+
+8.letter-spacing: 1px;
+used for add spacing between the letter
+9.neww learing for droping the shadow
+use:-- 
+filter: drop-shadow(0px 0px 20px red);
